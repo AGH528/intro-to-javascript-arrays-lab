@@ -11,19 +11,19 @@ foods.unshift('taco');
 console.log('Exercise 3 result:', foods);
 
 // Exercise 4
-const favFood = foods[1]; // 'pizza'
+const favFood = foods[1]; 
 console.log('Exercise 4 result:', favFood);
 
 // Exercise 5
-foods.splice(2, 0, 'tofu'); // Insert at index 2
+foods.splice(2, 0, 'tofu'); 
 console.log('Exercise 5 result:', foods);
 
 // Exercise 6
-foods.splice(1, 1, 'sushi', 'cupcake'); // Replace 'pizza'
+foods.splice(1, 1, 'sushi', 'cupcake'); 
 console.log('Exercise 6 result:', foods);
 
 // Exercise 7
-const yummy = foods.slice(1, 3); // 'sushi' and 'cupcake'
+const yummy = foods.slice(1, 3); 
 console.log('Exercise 7 result:', yummy);
 
 // Exercise 8
@@ -39,4 +39,46 @@ const hasSoup = foods.includes('soup');
 console.log('Exercise 10 result:', hasSoup);
 
 // Exercise 11
-const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81
+const nums = [100, 5, 23, 15, 21, 72, 9, 45, 66, 7, 81]
+
+// Exercise 12
+
+const fizz = [];
+const buzz = [];
+const fizzbuzz = [];
+
+for (const num of nums) {
+  if (num % 3 === 0) fizz.push(num);
+  if (num % 5 === 0) buzz.push(num);
+  if (num % 3 === 0 && num % 5 === 0) fizzbuzz.push(num);
+}
+console.log('Exercise 12 Results:');
+console.log('  fizz:', fizz);
+console.log('  buzz:', buzz);
+console.log('  fizzbuzz:', fizzbuzz);
+
+// Exercise 13
+
+const numArrays = [
+	[100, 5, 23],
+	[15, 21, 72, 9],
+	[45, 66],
+	[7, 81, 90]
+];
+const numList = numArrays[numArrays.length - 1];
+console.log('Exercise 13 result:', numList);
+
+// Exercise 14
+
+const num = numArrays[2][1];
+console.log('Exercise 14 result:', num);
+
+//Exercise 15
+
+let total = 0;
+numArrays.forEach(subArr => {
+  subArr.forEach(val => {
+    total += val;
+  });
+});
+console.log('Exercise 15 result:\n', total);
